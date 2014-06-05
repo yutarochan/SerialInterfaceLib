@@ -8,6 +8,7 @@ public class ArduLink {
 	public static void main(String[] args) {
 		String connectionPort = (String) Link.getDefaultInstance().getPortList().get(0);
 		int baudRate = 9600;
-		boolean connected = Link.getDefaultInstance().connect(connectionPort, baudRate);
+		
+		
 	}
 }

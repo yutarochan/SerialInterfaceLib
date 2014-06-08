@@ -10,4 +10,5 @@ The following execution notes is for the Linux Environment Only!
     cd /dev
     sudo ln -s ttyACM0 ttyUSB0
     '''
+The above source must be written in during boot sequence of the operating system.
 - Run as sudo to ensure that you can access the Serial Ports.

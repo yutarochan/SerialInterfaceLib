@@ -11,18 +11,19 @@ import org.zu.ardulink.gui.SerialConnectionPanel;
 public class ArduLink {
 
 	private static SerialConnectionPanel serialConnectionPanel;
+	private static boolean isConnected;
 	
 	public static void main(String[] args) {
 		String port = Link.getDefaultInstance().getPortList().get(0);
-		final String keyPort = port; 
+		final String keyPort = "/dev/ttyUSB0"; 
 				
 		Thread t = new Thread(new Runnable() {
 
 			public void run() {
 				while (true) {
 					if (keyPort.equals(Link.getDefaultInstance().getPortList().get(0)))
-						System.out.println(keyPort + " LIKNED!");
-					else System.out.println(keyPort + " UNLINK!");
+						System.out.println(keyPort + " is connected.");
+					else System.out.println(keyPort + " is disconnected.");
 					
 					try {
 						Thread.sleep(3000);
